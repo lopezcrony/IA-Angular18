@@ -1,0 +1,162 @@
+/* Estilos de fuentes amigables */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: "SUSE", sans-serif;
+  background-color: #f4f4f4;
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 85%; /* Aumentar el tamaño a 85% */
+  max-width: 900px;
+  height: 85vh; /* Más alto para abarcar mayor espacio */
+  margin: 5vh auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 10px 10px 0 0;
+}
+
+.chat-title {
+  display: flex;
+  align-items: center;
+}
+
+.chat-title img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.chat-title h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.chat-subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #fafafa;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.user-message {
+  justify-content: flex-end;
+}
+
+.avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message-content {
+  max-width: 70%;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-message .message-content {
+  background-color: #e0e0e0;
+}
+
+.message-author {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.message-time {
+  font-size: 12px;
+  color: #666;
+}
+
+.chat-input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input-container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.send-btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+  background-color: #555;
+}
+
+@media (max-width: 768px) {
+  .chat-container {
+    padding: 10px;
+  }
+
+  .chat-header h1 {
+    font-size: 18px;
+  }
+
+  .chat-box {
+    padding: 10px;
+  }
+
+  .avatar img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .chat-input-container input {
+    font-size: 14px;
+  }
+}
+
+

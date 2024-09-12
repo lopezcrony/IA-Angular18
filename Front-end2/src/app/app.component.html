@@ -1,0 +1,26 @@
+<div class="chat-container">
+  <div class="chat-header">
+    <div class="chat-title">
+      <img src="https://th.bing.com/th/id/OIP.Klh1l7wkoG6PDPb9A5oCHQHaHa?rs=1&pid=ImgDetMain" alt="Angular logo">
+      <h1>Angular Chat</h1>
+    </div>
+    <p class="chat-subtitle">Exclusive chat for Angular-related questions</p>
+  </div>
+
+  <div class="chat-messages">
+    <div *ngFor="let message of messages" class="message">
+      <div class="avatar">
+        <img [src]="message.author === 'Usuario' ? 'https://cdn-icons-png.flaticon.com/512/149/149071.png' : 'https://th.bing.com/th/id/OIP.Klh1l7wkoG6PDPb9A5oCHQHaHa?rs=1&pid=ImgDetMain'" alt="Avatar">
+      </div>
+      <div class="message-content">
+        <span class="message-author">{{ message.author }}</span>
+        <p>{{ message.text }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-input-container">
+    <input [(ngModel)]="userInput" type="text" placeholder="Escribe tu mensaje..." />
+    <button class="send-btn" (click)="sendMessage()">Enviar</button>
+  </div>
+</div>
